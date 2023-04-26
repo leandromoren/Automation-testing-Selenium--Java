@@ -1,0 +1,6 @@
+{
+  "Mostrar Alerta": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[contains(text(),'Clicka para mostrar mensaje')]"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "FirstName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.firstName']"
+  },
+
+  "LastName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.lastName']"
+  },
+
+  "Address": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.address.street']"
+  },
+
+  "City": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.address.city']"
+  },
+
+  "State": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.address.state']"
+  },
+
+  "ZipCode": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.address.zipCode']"
+  },
+
+  "Phone": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.phoneNumber']"
+  },
+
+  "SSN": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.ssn']"
+  },
+
+  "Username": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.username']"
+  },
+
+  "Password": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer.password']"
+  },
+
+  "ConfirmPass": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='repeatedPassword']"
+  },
+
+  "RegisterButton": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[13]/td[2]/input[1]"
+  },
+
+  "UsernameIsRequired": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[@id='customer.username.errors']"
+  }
+}

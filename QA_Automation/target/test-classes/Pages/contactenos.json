@@ -1,0 +1,6 @@
+{
+  "TIPO DE ATENCION": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//select[@id='id_contact']"
+  }
+}

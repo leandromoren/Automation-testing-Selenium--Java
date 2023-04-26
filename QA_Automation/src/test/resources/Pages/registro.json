@@ -1,0 +1,51 @@
+{
+  "Email": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='email_create']"
+  },
+
+  "Email_registro": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='email']"
+  },
+
+  "Button": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='SubmitCreate']"
+  },
+
+  "Mr.": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='id_gender1']"
+  },
+
+  "Mrs.": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='id_gender2']"
+  },
+
+  "First Name": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer_firstname']"
+  },
+
+  "Last Name": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='customer_lastname']"
+  },
+
+  "Password": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='passwd']"
+  },
+
+  "Register_button": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='submitAccount']"
+  },
+
+  "T-Shirts": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"
+  }
+}

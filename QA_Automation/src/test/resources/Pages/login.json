@@ -1,0 +1,11 @@
+{
+  "Email": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='email']"
+  },
+
+  "Password": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='passwd']"
+  }
+}
