@@ -45,7 +45,8 @@ public class SeleniumFunctions
     public static String GetFieldBy = "";
 
     public static String ValueToFind = "";
-
+    
+    /** Esta funcion lee las propiedades del archivo JSON */
     public String readProperties(String property) throws IOException
     {
         prop.load(is);
@@ -79,6 +80,7 @@ public class SeleniumFunctions
         }
     }
 
+    /** Esta funcion lee los valores de las propiedades del JSON */
     public static JSONObject ReadEntity(String element) throws Exception
     {
         JSONObject Entity = null;
@@ -130,6 +132,7 @@ public class SeleniumFunctions
         return result;
     }
 
+    /** Esta funcion selecciona un elemento de un dropdown por texto */
     public void selectOptionDropdownByText(String element, String option) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -139,6 +142,7 @@ public class SeleniumFunctions
         opt.selectByVisibleText(option);
     }
 
+    /** Esta funcion selecciona un elemento de un dropdown por index / indice */
     public void selectOptionDropdownByIndex(String element, int option) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -148,6 +152,7 @@ public class SeleniumFunctions
         opt.selectByIndex(option);
     }
 
+    /** Esta funcion selecciona un elemento de un dropdown por valor */
     public void selectOptionDropdownByValue(String element, String option) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -175,6 +180,7 @@ public class SeleniumFunctions
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
     }
 
+    /** Esta funcion verifica que el checkbox esta seleccionado */
     public void checkCheckbox(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -187,6 +193,7 @@ public class SeleniumFunctions
         }
     }
 
+     /** Esta funcion verifica que el checkbox no esta seleccionado */
     public void uncheckCheckbox(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -199,6 +206,7 @@ public class SeleniumFunctions
         }
     }
 
+     /** Esta funcion eliminar el texto de un input */
     public void eliminarTexto(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -244,6 +252,7 @@ public class SeleniumFunctions
         js.executeScript("arguments[0].scrollIntoView();",driver.findElement(SeleniumElement));
     }
 
+     /** Esta funcion verifica que la pagina este cargada en su totalidad */
     public void pageStatus()
     {
         try
@@ -330,6 +339,7 @@ public class SeleniumFunctions
         }
     }
 
+     /** Esta funcion toma una captura de pantalla */
     public void screenShot(String testCapture) throws IOException
     {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
@@ -341,6 +351,7 @@ public class SeleniumFunctions
         FileUtils.copyFile(srcFile, new File(String.format("%s.png", screenShotName)));
     }
 
+     /** Esta funcion obtiene el texto de un elemento */
     public String getTextElement(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -350,6 +361,7 @@ public class SeleniumFunctions
         return ElementText;
     }
 
+     /** Esta funcion verifica que el texto o mensaje no esta presente en la pagina */
     public void checkPartialTextElementNotPresent(String element, String text) throws Exception
     {
         ElementText = getTextElement(element);
@@ -357,6 +369,8 @@ public class SeleniumFunctions
         Assert.assertFalse("El texto esta presente en el elemento: " + element + " el texto actual es: " + ElementText, isFoundFalse);
     }
 
+    /** Esta funcion verifica que el texto o mensaje esta presente en la pagina
+    sin verificar el mensaje que contiene */
     public void checkPartialTextElementPresent(String element, String text) throws Exception
     {
         ElementText = getTextElement(element);
@@ -364,12 +378,14 @@ public class SeleniumFunctions
         Assert.assertTrue("El texto no esta presente en el elemento: " + element + " el texto actual es: " + ElementText, isFound);
     }
 
+    /** Esta funcion verifica que el texto o mensaje sea igual a como se le especifica */
     public void checkTextElementEqualTo(String element, String text) throws Exception
     {
         ElementText = getTextElement(element);
         Assert.assertEquals("El texto esta presente en el elemento: " + element + " el texto actual es: " + ElementText, text, ElementText);
     }
 
+    /** Esta funcion verifica que se muestre el elemento */
     public boolean isElementDisplayed(String element) throws Exception
     {
         try
@@ -386,6 +402,7 @@ public class SeleniumFunctions
         return isDisplayed;
     }
 
+    /** Esta funcion adjunta la screenshot para un reporte Allure */
     public byte[] attachScreenshot(String nameCapture)
     {
         byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
